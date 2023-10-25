@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letreiro React</title>
+</head>
+<body>
+  <div id="letreiro"></div>
+  <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+  <script>
+    const Letreiro = () => {
+      const texto = "Venha estudar na Fatec";
+      const [letras, setLetras] = React.useState('');
+      const [indice, setIndice] = React.useState(0);
+
+      React.useEffect(() => {
+        const interval = setInterval(() => {
+          if (indice < texto.length) {
+            setLetras((letras) => letras + texto.charAt(indice));
+            setIndice(indice + 1);
+          }
+        }, 200); 
+        return () => clearInterval(interval);
+      }, [indice]);
+
+      return <div>{letras}</div>;
+    };
+
+    const container = document.getElementById('letreiro');
+    ReactDOM.render(<Letreiro />, container);
+  </script>
+</body>
+</html>
