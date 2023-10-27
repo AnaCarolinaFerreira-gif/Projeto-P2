@@ -19,9 +19,9 @@ function Relogio() {
     
     return () => clearInterval(interval);
 
-  }, [hour, minute, second]);
+  }, [horas, minutos, segundos]);
   return (
-    <div>
+    <div className="relogio-container">
       <h1>Relógio Digital</h1>
       <div className="relogio">
         {horas}:{minutos}:{segundos}

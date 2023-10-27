@@ -1,10 +1,10 @@
 import React from 'react';
-import Router from "./router";
+import MinhasRotas from './MinhaRotas';
 
 
 function App() {
   return (
-   <Router />
+   <MinhasRotas />
   );
 }
 

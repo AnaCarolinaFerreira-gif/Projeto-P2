@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom"; 
+
 const Home = () => {
     return(
         <div>
@@ -7,10 +8,10 @@ const Home = () => {
             <nav>
                 <ul>
                     <li>
-                        <Link to="/Atividade01">Atividade 01</Link>
+                        <Link to="./Atividade01">Atividade 01</Link>
                     </li>
                     <li>
-                        <Link to="/Atividade02">Atividade 02</Link>
+                        <Link to="./Atividade02">Atividade 02</Link>
                     </li>
                 </ul>
             </nav>
