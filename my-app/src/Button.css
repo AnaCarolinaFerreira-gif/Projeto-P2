@@ -1,0 +1,31 @@
+
+
+.increment-button {
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .increment-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .decrement-button {
+    background-color: #FF6C6C;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .decrement-button:hover {
+    background-color: #d64040;
+  }
+  
