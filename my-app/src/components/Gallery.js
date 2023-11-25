@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./css/Gallery.css"
+import "./css/Gallery.css";
 
 export  function Profile() {
     return (
