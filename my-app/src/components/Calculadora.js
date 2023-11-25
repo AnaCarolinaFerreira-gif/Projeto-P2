@@ -1,38 +1,54 @@
-import "./css/Calculadora.css";
+import React, { useState } from 'react';
+import './Calculadora.css';
 
-export default function Calculadora() {
+const Calculadora = () => {
+  const [input, setInput] = useState('');
+  const [result, setResult] = useState('');
 
-    // function insert(num)
-    // {
-    //     var numero = document.getElementById('resultado').innerHTML;
-    //     document.getElementById('resultado').innerHTML = numero + num;
-    // }
-    // function clean()
-    // {
-    //     document.getElementById('resultado').innerHTML = "";
-    // }
-    // function back()
-    // {
-    //     var resultado = document.getElementById('resultado').innerHTML;
-    //     document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1);
-    // }
+  const Buttons = () => {
+    const buttons = [
+      'AC', '+/-', '%', '/',
+      '7', '8', '9', '*',
+      '4', '5', '6', '-',
+      '1', '2', '3', '+',
+      '0', '.', '=',
+    ];
 
-    // function calcular()
-    // {
-    //     var resultado = document.getElementById('resultado').innerHTML;
-    //     if(resultado)
-    //     {
-    //         document.getElementById('resultado').innerHTML = eval(resultado);
-    //     }
-    //     else
-    //     {
-    //         document.getElementById('resultado').innerHTML = "Nada..."
-    //     }
-    // }
-    
-    return(
-        <h1>ATIVIDADE LAB DE ENGENHARIA DE SOFTWARE- ANA CAROLINA FERREIRA SANTOS
-        </h1>
-    
-    )
-}
+    const handleButtonClick = (value) => {
+        if (value === '=') {
+          try {
+            setResult(eval(input).toString());
+          } catch (error) {
+            setResult('Erro');
+          }
+        } else if (value === 'AC') {
+          setInput('');
+          setResult('');
+        } else if (value === '+/-') {
+          setInput((prevInput) => (parseFloat(prevInput) * -1).toString());
+        } else if (value === '%') {
+          setInput((prevInput) => (parseFloat(prevInput) / 100).toString());
+        } else {
+          setInput(input + value);
+        }
+      };
+
+    return buttons.map((button) => (
+      <button key={button} onClick={() => handleButtonClick(button)}>
+        {button}
+      </button>
+    ));
+  };
+
+  return (
+    <div className="calculadora">
+      <div className="display">
+        <input type="text" value={input} readOnly />
+        <span className="result">{result}</span>
+      </div>
+      <div className="buttons">{Buttons()}</div>
+    </div>
+  );
+};
+
+export default Calculadora;

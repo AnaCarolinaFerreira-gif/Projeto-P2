@@ -1,7 +1,11 @@
+import Gallery from "./components/Gallery";
+import {Link} from "react-router-dom";
+
 export default function Atividade03() {
     return(
         <>
-            <h1>Atividade 3: Componentes diversos</h1>
+            <Gallery />
+            <Link to="/">Retornar</Link>
         </>
     );
 }
