@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
-import Letreiro from "./Letreiro";
-import Relogio from "./Relogio";
+import Letreiro from "./components/Letreiro";
+import Relogio from "./components/Relogio";
 
 
 function Atividade01(){
