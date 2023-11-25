@@ -1,0 +1,72 @@
+/* App.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+  background: url('../background/backgroundfruits.png') center/cover no-repeat;
+  overflow: hidden;
+  text-align: center; /* Mantenha o texto centralizado */
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #ddd;
+  border-radius: 8px; /* Adicione bordas arredondadas, se desejar */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.card.flipped {
+  background-color: #fff;
+}
+
+/* Adicionando estilos para o botão Restart */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centralizar verticalmente */
+  margin-top: 20px;
+}
+
+.button {
+  width: 120px; /* Ajuste conforme necessário */
+  height: 40px; /* Ajuste conforme necessário */
+  background: url('../background/restart-button.png') center/cover no-repeat;
+  background-size: contain; /* Adicione essa linha para garantir que a imagem seja exibida completamente */
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); /* Em telas menores, 2 colunas */
+  }
+
+  .card {
+    width: 100%; /* Cartas ocupam 100% da largura em telas menores */
+  }
+}

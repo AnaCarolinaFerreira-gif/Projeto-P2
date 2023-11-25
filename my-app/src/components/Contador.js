@@ -3,6 +3,9 @@ import { useState, React } from "react";
 import Button from './Button';
 import './css/Contador.css';
 
+import imgHomem from "./img/icon-homen.png";
+import imgMulher from "./img/icon-mulher.png";
+import imgReset  from "./img/circular.png";
 
 export default function Contador() {
 
@@ -38,19 +41,20 @@ export default function Contador() {
   return (
     <div className="contador">
       <h1> Total de Pessoas</h1>
+      
       <button onClick={reset} id="reset">
-        <img src={btnReset} alt="Reset" />
+        <img  className="imgReset" src={ imgReset } alt="Reset" />
       </button>
       <span id="total" className="value">{total}</span>
       <div className="pessoas">
         <div className="pessoas-contador">
-          <img className="avatar" src={Homem} alt="Avatar Homem" />
+          <img className="avatar" src={imgHomem} alt="Avatar Homem" />
           <Button value={homens} onChange={handleHomensChange} />
           <label>Homens</label>
           <span className="value">{homens}</span>
         </div>
         <div className="pessoas-contador">
-          <img className="avatar" src={Mulher} alt="Avatar Mulher" />
+          <img className="avatar" src={imgMulher} alt="Avatar Mulher" />
           <Button value={parseInt(mulheres)} onChange={handleMulheresChange} />
           <label>Mulheres</label>
           <span className="value">{mulheres}</span>
