@@ -1,7 +1,12 @@
+import Contador from "./components/Contador";
+
+
 function Atividade02(){
     return(
-        <h1>Atividade 02</h1>
-
+        <>
+            <Contador />
+            <Link to="/">Retornar</Link>
+        </>
     );
 }
 

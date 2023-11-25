@@ -1,7 +1,7 @@
 import { useState, React } from "react";
 
 import Button from './Button';
-import './contador.css';
+import './css/contador.css';
 
 
 export default function Contador() {

@@ -1,4 +1,5 @@
-import "./Button.css";
+import "./css/Button.css";
+
 function Button({ value, onChange }) {
 
   const increaseValue = () => {
