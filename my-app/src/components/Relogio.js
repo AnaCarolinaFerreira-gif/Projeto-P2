@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './Relogio.css';
+import './css/Relogio.css';
 
 
 function Relogio() {

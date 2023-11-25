@@ -1,5 +1,6 @@
 import { useState } from react; 
-import Button from "./components/Button";
+import "./css/Calculadora.css";
+import Button from "./Button";
 
 export default function Calculadora() {
 
