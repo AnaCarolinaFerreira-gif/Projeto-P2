@@ -1,5 +1,7 @@
+import MemoryGame from "./components/JogoMemoria";
+
 export default function Atividade05() {
     return(
-        <h1>Atividade 05</h1>
+        <MemoryGame />
     );
 }
